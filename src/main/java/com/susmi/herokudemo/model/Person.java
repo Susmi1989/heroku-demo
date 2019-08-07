@@ -10,15 +10,9 @@ import javax.persistence.Id;
 public class Person {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private String identifier;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 	
-	public String getIdentifier() {
-		return identifier;
-	}
-	public void setIdentifier(String identifier) {
-		this.identifier = identifier;
-	}
 	private String name;
 	private String company;
 	
@@ -35,6 +29,16 @@ public class Person {
 		this.company = company;
 	}
 	
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public Person(){
+		
+	}
 	
 
 }
