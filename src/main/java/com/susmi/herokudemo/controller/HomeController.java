@@ -16,7 +16,9 @@ public class HomeController {
 	
 	@GetMapping("/hello")
 	public String home(){
-		return "hello";
+		
+		return repo.findByName(1L).get(0).getCompany();
+		//return "hello";
 	}
 	
 	@RequestMapping("/")
